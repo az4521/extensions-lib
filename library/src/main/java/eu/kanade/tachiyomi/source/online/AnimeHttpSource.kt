@@ -5,6 +5,8 @@ import eu.kanade.tachiyomi.source.model.MangasPage
 import eu.kanade.tachiyomi.source.model.Page
 import eu.kanade.tachiyomi.source.model.SChapter
 import eu.kanade.tachiyomi.source.model.SManga
+import okhttp3.Request
+import okhttp3.Response
 import rx.Observable
 
 /**
@@ -40,24 +42,10 @@ abstract class AnimeHttpSource : HttpSource() {
     override fun fetchLatestUpdates(page: Int): Observable<MangasPage> = throw Exception("Stub!")
 
     //unused
-    override fun imageUrlParse(response: Response) = throw Exception("Stub!")
-
     override fun popularMangaRequest(page: Int): Request = throw Exception("Stub!")
-
-    override fun searchMangaParse(response: Response): MangasPage = throw Exception("Stub!")
 
     override fun searchMangaRequest(page: Int, query: String, filters: FilterList): Request = throw Exception("Stub!")
 
-    override fun mangaDetailsParse(response: Response): SManga = throw Exception("Stub!")
-
-    override fun pageListParse(response: Response): List<Page> = throw Exception("Stub!")
-
-    override fun popularMangaParse(response: Response): MangasPage = throw Exception("Stub!")
-
-    override fun chapterListParse(response: Response): List<SChapter> = throw Exception("Stub!")
-
     override fun latestUpdatesRequest(page: Int): Request = throw Exception("Stub!")
-
-    override fun latestUpdatesParse(response: Response): MangasPage = throw Exception("Stub!")
 
 }
